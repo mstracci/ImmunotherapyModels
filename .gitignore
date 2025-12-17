@@ -1,0 +1,13 @@
+# Pycharm IDE settings
+/.idea/
+
+# Python virtual environment
+/venv/
+/.venv/
+
+# Cached files
+__pycache__/
+
+# Package and docs build results
+dist/
+build/

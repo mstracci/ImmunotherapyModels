@@ -25,12 +25,9 @@ from matplotlib.lines import Line2D
 
 ###############################################################################
 
-<<<<<<< HEAD
+
 # The Name of studies which are save in one folder
 studies = ['Study1', 'Study2', 'Study3', 'Study4', 'Study5']
-=======
-studies = ['a', 'a', 'c', 'd', 'e']
->>>>>>> c7994f5b057179a0511e27ccbd9dd9f379a44404
 functions = ['Exponential', 'Logistic', 'ClassicBertalanffy', 'GeneralBertalanffy', 'Gompertz', 'GeneralGompertz']
 splits = [True, True, False, True, True]
 trends = ['Up', 'Down', 'Fluctuate']
@@ -62,14 +59,6 @@ for studyName in studies:
 #maxi = np.max([288, 0])
 maxi = np.max(maxList)
 
-<<<<<<< HEAD
-=======
-studies = ['a', 'a', 'c', 'd', 'e']
-functions = ['Exponential', 'Logistic', 'ClassicBertalanffy', 'GeneralBertalanffy', 'Gompertz', 'GeneralGompertz']
-splits = [True, True, False, True, True]
-noPars = [3, 3, 3, 4, 3, 4]
-
->>>>>>> c7994f5b057179a0511e27ccbd9dd9f379a44404
 for studyName in studies:
     sind = studies.index(studyName)    
     sp = splits[sind]    
@@ -145,7 +134,7 @@ for studyName in studies:
                             modelPredictions = fitfunc(time, *fittedParameters)                             
                         except:
                             result_dict =  utils.Write_On_Result_dict(result_dict, arm, trend, categories = ['patientID','time', 'dimension', 'prediction', 'rmse', 'rSquare','aic', 'params', 'cancer'], values = [key, time, dimension, np.nan, np.nan, np.nan, np.nan, np.nan, cn])
-                                continue
+                            continue
                         
                         if len(set(dimension)) == 1:
                             modelPredictions = dimension
@@ -205,13 +194,6 @@ plt.title('R-Squared values for each arms', fontsize = 20 )
 
 # Fit Example Per Study
 
-<<<<<<< HEAD
-=======
-studies = ['a', 'a', 'c', 'd', 'e']
-functions = ['Exponential', 'Logistic', 'ClassicBertalanffy', 'GeneralBertalanffy', 'Gompertz', 'GeneralGompertz']
-
-f = functions[3]
->>>>>>> c7994f5b057179a0511e27ccbd9dd9f379a44404
 arm = [0,0,1,0,0,1,0,1,2,0,1,1,0,0,0]
 item =[3,3,0,3,8,1,3,1,0,3,0,4,0,2,1]
 f = functions[3]
@@ -279,7 +261,6 @@ ax.set_xticklabels(labels = functions, rotation = 30,fontsize = 10 )
 plt.title('MAE values for each arms', fontsize = 20 )
               
 ###############################################################################
-<<<<<<< HEAD
 # Plot the observed values versus predicted values
 ###############################################################################
 
@@ -325,30 +306,4 @@ ax.set_aspect(1.0/ax.get_data_ratio(), adjustable='box')
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 plt.draw()
-
-    
 ###############################################################################
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-=======
-
-
->>>>>>> c7994f5b057179a0511e27ccbd9dd9f379a44404
